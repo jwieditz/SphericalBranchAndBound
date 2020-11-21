@@ -1,6 +1,6 @@
 # Spherical Branch And Bound Algorithms
 
-This projects includes an R package containing a branch and bound algorithm for computing Fréchet-$p$-means on the circle $\mathbb{S}^1$ and the 2-sphere $\mathbb{S}^2$. Moreover, we provide a wrapper to easily extend these algorithms also to spheres of higher dimension. This wrapper demands as an input:
+This projects includes an R package containing a branch and bound algorithm for computing Fréchet-p-means on the circle and the 2-sphere. Moreover, we provide a wrapper to easily extend these algorithms also to spheres of higher dimension. This wrapper demands as an input:
 
 * an initial triangulation SET of the sphere,
 * a procedure INIT which computes for a given spherical triangle its size, a lower and an upper bound of the Fréchet function on this triangle,
@@ -11,7 +11,7 @@ This repository is supplementary to [Eichfelder, G., Hotz, T., Wieditz, J. (2019
 
 | ![Result of SBB](https://github.com/jwieditz/SphericalBranchAndBound/blob/jwieditz-patch-1/application_example.png) | 
 |:--:| 
-| *An $(\varepsilon, \delta)$ approximation computed using the $\mathbb{S}$BB algorithm applied to an example data set.* |
+| *An <img src="https://render.githubusercontent.com/render/math?math=(\varepsilon, \delta)"> approximation computed using the SBB algorithm applied to an example data set.* |
 
 # The Spherical Branch and Bound ($\mathbb{S}$BB) package
 
