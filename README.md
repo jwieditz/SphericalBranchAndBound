@@ -13,7 +13,7 @@ This repository is supplementary to [Eichfelder, G., Hotz, T., Wieditz, J. (2019
 |:--:| 
 | *An <img src="https://render.githubusercontent.com/render/math?math=(\varepsilon, \delta)"> approximation computed using the SBB algorithm applied to an example data set.* |
 
-# The Spherical Branch and Bound ($\mathbb{S}$BB) package
+# The Spherical Branch and Bound (SBB) package
 
 To use the $\mathbb{S}$BB R-package follow the steps below:
 
