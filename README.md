@@ -25,3 +25,7 @@ To use the SBB R-package follow the steps below:
 2. Load the library via `library(SphericalBranchAndBound)`.
 3. For an example on the circle, run `example(SBB.circle)`.
 4. For an example on the 2-sphere, run `example(SBB.sphere)`.
+
+# Licence
+
+This package is released under the [GPL3.0 licence](https://github.com/jwieditz/SphericalBranchAndBound/blob/master/license).
