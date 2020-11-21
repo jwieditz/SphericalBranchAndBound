@@ -277,6 +277,8 @@ is.in.Lambda.qr <- function( Q, R, y ){
 #'
 #' @result The spherical coordinates of y.
 #' @author Johannes Wieditz
+#'
+#' @export
 
 get.angles <- function( y ){
 
@@ -290,6 +292,8 @@ get.angles <- function( y ){
 #'
 #' @result The geographical spherical coordinates of y.
 #' @author Johannes Wieditz
+#'
+#' @export
 
 get.angles.geo <- function( y ){
 
@@ -304,6 +308,8 @@ get.angles.geo <- function( y ){
 #'
 #' @result The geographical spherical coordinates of y.
 #' @author Johannes Wieditz
+#'
+#' @export
 
 get.vector <- function( theta = 0, phi = 0 ){
 
@@ -327,3 +333,61 @@ size.sphere <- function( A ){
   }
   size / ( 4 * pi ) * 100
 }
+
+#' Plot the computed (eps, delta)-approximation on a 3D object.
+#'
+#' @param A The computed (eps, delta)-approximation.
+#' @param data The input data as list of cartesian coordinates.
+#'
+#' @result A plot-object of the passed list.
+#'
+#' @author Johannes Wieditz
+#'
+#' @export
+
+draw.eps.delta.approximation <- function( A, data ){
+
+  coords.list <- matrix(data = NA, nrow = length(A$output), ncol = 3)
+
+  for( i in 1:length(A$output) ){
+    coords.list[i,1] <- A$output[[i]]$d1[1]
+    coords.list[i,2] <- A$output[[i]]$d1[2]
+    coords.list[i,3] <- A$output[[i]]$d1[3]
+  }
+
+  input.coords <- matrix(data = NA, nrow = length(data), ncol = 2)
+
+  for( i in 1:length(data)){
+
+    input.coords[i,1] <- get.angles.geo(data[[i]])[[1]]
+    input.coords[i,2] <- get.angles.geo(data[[i]])[[2]]
+  }
+
+  toplot <- matrix( data = NA, nrow = length(A$toplot) + 6, ncol = 3)
+
+  for( i in 1:length(A$toplot)){
+
+    toplot[i,1] <- A$toplot[[i]][1]
+    toplot[i,2] <- A$toplot[[i]][2]
+    toplot[i,3] <- A$toplot[[i]][3]
+
+  }
+
+  toplot[ length(A$toplot) + 1 , ] <- c(1,0,0)
+  toplot[ length(A$toplot) + 2 , ] <- c(-1,0,0)
+  toplot[ length(A$toplot) + 3 , ] <- c(0,1,0)
+  toplot[ length(A$toplot) + 4 , ] <- c(0,-1,0)
+  toplot[ length(A$toplot) + 5 , ] <- c(0,0,1)
+  toplot[ length(A$toplot) + 6 , ] <- c(0,0,-1)
+
+  rgl.sphgrid(radius = 1, col.long='red', col.lat='blue', deggap = 30, longtype = "D", add = FALSE, radaxis=F)
+  rgl.sphpoints(input.coords[,1], input.coords[,2], 1, deg = FALSE , col='black', size = 10, bg = "white")
+
+  plot(ashape3d(toplot, alpha = .5), byComponents = FALSE, indexAlpha = "all", col = c(rgb(1, 1, 1, 0), "black", "black"), clear = FALSE, transparency = .25 )
+  plot(ashape3d(coords.list, alpha = .5), byComponents = FALSE, indexAlpha = "all", col = c("red","red","red"), clear = FALSE,  transparency = 1)
+
+  return()
+}
+
+
+

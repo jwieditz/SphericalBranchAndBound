@@ -2,4 +2,8 @@
 
 export(SBB.circle)
 export(SBB.sphere)
+export(draw.eps.delta.approximation)
+export(get.angles)
+export(get.angles.geo)
+export(get.vector)
 export(norm.vec)
