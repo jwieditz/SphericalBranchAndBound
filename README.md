@@ -15,13 +15,13 @@ This repository is supplementary to [Eichfelder, G., Hotz, T., Wieditz, J. (2019
 
 # The Spherical Branch and Bound (SBB) package
 
-To use the $\mathbb{S}$BB R-package follow the steps below:
+To use the SBB R-package follow the steps below:
 
 1. Install the R-package SphericalBranchAndBound via
 
 	`library(remotes)`
 
-	`install_github('jwieditz/SphericalBranchAndBound/MiSeal')`.
+	`install_github('jwieditz/SphericalBranchAndBound/SphericalBranchAndBound')`.
 2. Load the library via `library(SphericalBranchAndBound)`.
 3. For an example on the circle, run `example(SBB.circle)`.
 4. For an example on the 2-sphere, run `example(SBB.sphere)`.
