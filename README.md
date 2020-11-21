@@ -9,7 +9,7 @@ This projects includes an R package containing a branch and bound algorithm for 
 
 This repository is supplementary to [Eichfelder, G., Hotz, T., Wieditz, J. (2019). An algorithm for computing Fréchet means on the sphere.](https://link.springer.com/article/10.1007/s11590-019-01415-y)
 
-| ![ScreenshotGUI](https://github.com/jwieditz/SphericalBranchAndBound/blob/jwieditz-patch-1.png/application_example.png) | 
+| ![Result of SBB](https://github.com/jwieditz/SphericalBranchAndBound/blob/jwieditz-patch-1/application_example.png) | 
 |:--:| 
 | *An $(\varepsilon, \delta)$ approximation computed using the $\mathbb{S}$BB algorithm applied to an example data set.* |
 
