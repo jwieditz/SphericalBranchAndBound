@@ -7,7 +7,6 @@
 #' @author Johannes Wieditz
 #'
 #' @examples
-#'
 #'   # Simulated data.
 #'   set.seed(42)
 #'   x <- list()
@@ -22,7 +21,7 @@
 #' \donttest{
 #'
 #'  # Data from real application.
-#'  require(CircNNTSR)
+#'  library(CircNNTSR)
 #'  data("DataB5FisherSpherical")
 #'  DataB5FisherSpherical <- DataB5FisherSpherical / 180 * pi
 #'

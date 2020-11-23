@@ -339,6 +339,8 @@ size.sphere <- function( A ){
 #' @param A The computed (eps, delta)-approximation.
 #' @param data The input data as list of cartesian coordinates.
 #'
+#' 
+#'
 #' @result A plot-object of the passed list.
 #'
 #' @author Johannes Wieditz
@@ -347,6 +349,10 @@ size.sphere <- function( A ){
 
 draw.eps.delta.approximation <- function( A, data ){
 
+  library(rgl)
+  library(sphereplot)
+  library(alphashape3d)
+  
   coords.list <- matrix(data = NA, nrow = length(A$output), ncol = 3)
 
   for( i in 1:length(A$output) ){
