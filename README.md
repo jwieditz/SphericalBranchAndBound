@@ -1,6 +1,6 @@
 # Spherical Branch And Bound Algorithms
 
-This projects includes an R package containing a branch and bound algorithm for computing Fréchet-p-means on the circle and the 2-sphere. Moreover, we provide a wrapper to easily extend these algorithms also to spheres of higher dimension. This wrapper demands as an input:
+This project includes an R package containing a branch and bound algorithm for computing Fréchet-p-means on the circle and the 2-sphere. Moreover, we provide a wrapper to easily extend this algorithm also to spheres of higher dimension. This wrapper requires as an input:
 
 * an initial triangulation SET of the sphere,
 * a procedure INIT which computes for a given spherical triangle its size, a lower and an upper bound of the Fréchet function on this triangle,
